@@ -1,0 +1,30 @@
+---
+description: Documentation and changelog requirements for every feature change
+globs: apps/docs/**/*,README.md,CONTRIBUTING.md,CHANGELOG.md,plans/**/*
+alwaysApply: false
+---
+# Documentation
+
+## Canonical sources
+
+| Topic | Location |
+|-------|----------|
+| Domain + Changelog | `apps/docs/core/platform-guide.md` |
+| Agent condensed domain | `.cursor/rules/platform-guide.mdc` |
+| Getting started | `apps/docs/guides/getting-started.md` + root `README.md` |
+| Schema details | `apps/docs/guides/data-schema.md` |
+| ML details | `apps/docs/guides/ml-pipeline.md` |
+| Fit scenarios / thresholds | `.cursor/rules/ml-evaluation.mdc` + `src/train/diagnostics.py` |
+| Setup / how to start | `setup.md` (+ `package.json` scripts) |
+| Contributor process | `CONTRIBUTING.md` |
+| Agent entry | `CLAUDE.md` |
+| Release notes | root `CHANGELOG.md` (high level); platform-guide for product behavior |
+
+## Rules
+
+1. Every **feat** that changes behavior updates `platform-guide.md` Changelog in the same change.
+2. Condensed Cursor rule `platform-guide.mdc` stays aligned with the docs guide.
+3. New folder/feature convention → update `feature-folder-structure.mdc`.
+4. New schema column → `data-schema` rule + guide + `src/shared/schema.py`.
+5. Numbered design work → `plans/00N-title.md` + status in `plans/README.md`.
+6. Write in active voice; address “you”; keep examples runnable.

@@ -1,0 +1,88 @@
+---
+description: Development conventions, code style, commits, and docs for RCC Column ML
+globs:
+alwaysApply: true
+---
+# Development Conventions
+
+## Code Style (Python)
+
+- **Formatter/linter**: Ruff (`pyproject.toml`) — line length 100, double quotes, spaces
+- **Python**: 3.10+; prefer explicit types on public function signatures
+- **Imports**: stdlib → third-party → local (`src.*`); sorted by Ruff `I`
+- **Naming**:
+  - modules/files: `kebab-case` only for docs/plans; Python modules `snake_case.py`
+  - functions/vars: `snake_case`
+  - classes: `PascalCase`
+  - constants: `UPPER_SNAKE`
+
+```python
+# Good
+from src.shared.schema import FEATURE_COLUMNS
+
+def train_peak_model(data_path: str) -> dict:
+    ...
+
+# Bad — logic in UI, unclear names
+def DoStuff(x):
+    ...
+```
+
+## Git Conventions
+
+### Commits (Conventional Commits)
+
+```
+feat: add peak-mode XGBoost baseline
+fix: prevent specimen leakage in curve split
+docs: update platform-guide changelog
+refactor: move plot helpers into shared
+test: cover backbone envelope extraction
+chore: bump requirements
+```
+
+### Branches
+
+- `feat/`, `fix/`, `docs/`, `refactor/`, `chore/`, `hotfix/`
+
+## File Structure Inside a Feature
+
+```
+src/{feature}/
+├── __init__.py
+├── service.py       # Public API used by CLI / Streamlit
+├── ...              # helpers colocated with the feature
+└── cli.py           # Optional argparse entry (or module __main__)
+```
+
+Streamlit:
+
+```
+apps/web/
+├── streamlit_app.py     # Entry + tab wiring only
+├── pages/               # Optional multipage; keep thin
+└── components/          # Reusable charts/forms only
+```
+
+## Error Handling
+
+- Fail fast with clear messages for missing CSV columns / units
+- Never silently coerce wrong SI units
+- Log or raise; do not swallow exceptions in training paths
+
+## Documentation
+
+- **Why, not what** in code comments
+- Public CLI flags documented in README + `apps/docs/guides/`
+- Every user-facing feature: update `apps/docs/core/platform-guide.md` Changelog
+
+## Environment
+
+- Single root `.env` (optional); document in `setup.md`
+- Day-to-day start: `npm run dev` (Streamlit); see `package.json` / `setup.md`
+- Never commit secrets or large raw PEER dumps that can be re-downloaded
+
+## Testing
+
+- Tests live under `tests/{feature}/` mirroring `src/{feature}/`
+- Prefer small fixtures under `tests/fixtures/` when needed

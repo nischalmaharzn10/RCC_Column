@@ -1,0 +1,19 @@
+{
+  "name": "rcc-column-ml",
+  "private": true,
+  "description": "RCC Column ML — Streamlit UI and training scripts",
+  "scripts": {
+    "dev": "streamlit run apps/web/streamlit_app.py",
+    "start": "npm run dev",
+    "build:data": "python -m src.dataset.build_dataset --out data/processed",
+    "train:peak": "python -m src.train.train --mode peak --data data/processed/dataset_ml.csv --target peak_load_kN",
+    "train:curve": "python -m src.train.train --mode curve --curves data/processed/curves_backbone.csv",
+    "train": "npm run train:peak && npm run train:curve",
+    "lint": "ruff check .",
+    "format": "ruff format .",
+    "test": "pytest"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ML artifacts (regenerate locally; keep folder markers)
+models/*.joblib
+models/*.pkl
+# Allow production deploy artifacts (needed by Streamlit Cloud Predict)
+!models/best_model_peak.joblib
+!models/best_model_curve.joblib
+!models/.gitkeep
+outputs/*
+!outputs/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/raw/peer_curves/
+!data/raw/properties_rect.csv
+!data/raw/.gitkeep
+
+# Keep PEER downloads under samples/ (large but intentional training source)
+!samples/
+
+# Local venv / tooling noise
+node_modules/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml

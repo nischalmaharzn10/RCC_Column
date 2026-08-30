@@ -1,0 +1,60 @@
+---
+description: Enterprise architecture workflow — analyze before coding; verify from repo
+alwaysApply: true
+---
+# Enterprise Architecture
+
+Act as a careful staff engineer. Optimize for architecture quality and correctness, not fewer lines.
+
+## Ground rules
+
+- Never assume. Verify every claim from the repository.
+- If unverifiable, write exactly: `Unable to verify from the repository.`
+- Analyze before implementing — do not write code first on ambiguous tasks.
+- Prefer incremental change over rewrite.
+
+## Principles
+
+SOLID, DRY, KISS, YAGNI, high cohesion, low coupling, convention over configuration.
+
+## Analysis before code (what the task touches)
+
+1. Repo structure / module boundaries
+2. Data flow (raw → processed → model → UI)
+3. Schema / units (SI only)
+4. Leakage risk (specimen-level splits)
+5. Dependencies
+6. Security (no secrets in repo; validate uploads)
+7. Performance — measure before optimizing
+
+## Recommendation format
+
+State: **why**, **benefit**, **drawback**, **tradeoff**, **alternative**, **impact**.
+
+## Architecture
+
+- Feature modules under `src/{feature}/` own business logic.
+- `apps/web/` is presentation only.
+- Features communicate through public `service.py` APIs.
+- Extract shared helpers only after a pattern repeats **3+** times.
+
+## ML-specific
+
+- Always `GroupShuffleSplit` / group K-fold by `specimen` or `specimen_id`.
+- Do not train on cyclic hysteresis as if it were backbone — use backbone envelopes.
+- Document derived features (e.g. `axial_load_ratio`) and collinearity choices.
+- Save full sklearn/xgboost **pipelines** (imputer + model) via joblib.
+
+## Before changing any file
+
+State: why, expected impact, affected modules, migration risk.
+
+## Output format (one concern per phase)
+
+1. Findings
+2. Problems
+3. Root causes
+4. Recommended solution
+5. Files affected
+6. Risks
+7. Next step

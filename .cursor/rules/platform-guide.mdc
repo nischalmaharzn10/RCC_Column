@@ -1,0 +1,67 @@
+---
+description: Domain logic, modelling modes, UI tabs, and changelog — keep in sync with apps/docs/core/platform-guide.md
+globs:
+alwaysApply: true
+---
+# Platform Guide (Agent Reference)
+
+**Canonical doc:** `apps/docs/core/platform-guide.md`
+
+When you add or change features, **update that file** in the same change — especially the Changelog table and any section describing the behavior you touched. Mirror condensed facts here.
+
+## Goal
+
+Train an ML surrogate that predicts an RCC column's load–deformation response (peak and/or full backbone) from design parameters. Validate against PEER experiments; optionally reuse ANSYS runs in the same schema.
+
+## Data sources
+
+| Source | Role |
+|--------|------|
+| PEER UW rectangular DB | Experimental specimens (~299) |
+| ANSYS exports | Numerical runs; same columns + `source=ansys` |
+| `data/raw/properties_rect.csv` | Feature table (one row per specimen) |
+
+## Modelling modes
+
+| Mode | Row | X → y | Output files |
+|------|-----|--------|--------------|
+| Peak | one specimen | design params → `peak_load_kN` (+ optional `disp_at_peak_mm`) | `dataset_ml.csv`, `best_model_peak.joblib` |
+| Curve | one curve point | design params + `displacement_mm` → `lateral_load_kN` | `curves_backbone.csv`, `best_model_curve.joblib` |
+
+Start with **peak**, then **curve**. Always split by `specimen` / `specimen_id`.
+
+## Feature columns (properties)
+
+`specimen`, `fc_MPa`, `P_axial_kN`, `b_mm`, `h_mm`, `L_mm`, `Lsplice_mm`, `test_config`, `db_long_mm`, `n_long_bars`, `cover_mm`, `rho_long`, `fyl_MPa`, `steel_grade`, `db_trans_mm`, `s_hoop_mm`, `rho_trans`, `fyt_MPa`, `failure_mode`, `axial_load_ratio`, optional `source`
+
+Units: SI only (mm, kN, MPa).
+
+## Streamlit UI tabs (`apps/web/`)
+
+| Surface | Purpose |
+|---------|---------|
+| Predict (home) | Design-param form → peak + curve prediction |
+
+No navbar; Models/Curves not in the app shell.
+
+## Models (baselines)
+
+Random Forest, XGBoost, MLP — pick best by **group CV RMSE** (not test R² alone); classify fit scenarios per `ml-evaluation.mdc`.
+
+## Hosting
+
+Private GitHub + Streamlit Community Cloud (`apps/web/streamlit_app.py`). Track `best_model_*.joblib` for deploy. Push → auto redeploy. Guide: `apps/docs/guides/hosting.md`.
+
+## Changelog (recent)
+
+| Date | Change |
+|------|--------|
+| 2026-08-30 | Hosting guide + deploy joblibs + `runtime.txt` |
+| 2026-08-30 | Streamlit Predict-only (no navbar) |
+| 2026-08-30 | 251 specimens + two-stage curve; peak GBR / curve XGB `good_fit`; engineered features |
+| 2026-08-30 | Fit scenario diagnostics + `ml-evaluation.mdc` |
+| 2026-08-30 | Anti-overfit CV training; specimen error tables; UI scenario panel |
+| 2026-08-29 | End-to-end ML: dataset build, peak/curve train, predict + Streamlit graphs |
+| 2026-08-29 | PEER rectangular data in `samples/` (properties + 286 curves) |
+| 2026-08-29 | setup.md + package.json (`npm run dev` / train / build:data) |
+| 2026-08-29 | Initial repo organization (apps/, src features, docs, Cursor rules) |

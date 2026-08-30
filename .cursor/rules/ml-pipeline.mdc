@@ -1,0 +1,49 @@
+---
+description: ML training, evaluation, and model artifact conventions
+globs: src/train/**/*,src/predict/**/*,models/**/*,outputs/**/*
+alwaysApply: false
+---
+# ML Pipeline
+
+## Entry points
+
+- Train: `python -m src.train.train --mode peak|curve ...` (tqdm progress; `--quiet` to disable)
+- Predict: `src.predict.service` (used by Streamlit Predict tab)
+- Diagnostics: `src.train.diagnostics` — see **`.cursor/rules/ml-evaluation.mdc`**
+
+## Peak mode
+
+1. Load `data/processed/dataset_ml.csv`
+2. Features: `TRAINING_FEATURE_COLUMNS` + categoricals (**not** `axial_load_ratio`)
+3. Target: `peak_load_kN`
+4. Split: `GroupShuffleSplit` on `specimen_id`; **5-fold group CV** on train split
+5. Models: regularized RF / XGBoost / MLP
+6. Metrics: train + test + CV → `outputs/metrics_peak.csv`
+7. Diagnostics: `outputs/training_diagnostics_peak.json`, `specimen_errors_peak.csv`
+8. Artifacts: `models/best_model_peak.joblib`, parity under `outputs/`
+
+## Curve mode
+
+1. Load `curves_backbone.csv`
+2. X = design features + `displacement_mm`; y = `lateral_load_kN`
+3. Same split + CV + diagnostics → `training_diagnostics_curve.json`, `specimen_errors_curve.csv`
+4. Save `models/best_model_curve.joblib`
+5. Plot panel: **2 worst + 2 best** test specimens by R² (not random four)
+
+## Fit scenarios (required)
+
+Every train run classifies: **good_fit**, **overfit**, **overfit_severe**, **underfit**, **high_cv_variance**, **optimistic/pessimistic_holdout**, **peak_outliers**, **curve_poor_specimens**, **curve_softening_miss**.
+
+Full thresholds and actions: **`ml-evaluation.mdc`**.
+
+## Hard rules
+
+- **No specimen leakage** — never random-split curve points across train/test
+- Save **full pipelines**, not bare estimators
+- **Never** report test R² alone — always train R², gap, CV RMSE, diagnostics severity
+- Saved joblib = refit on **full** data after holdout selection
+- Do not commit large `.joblib` if gitignored; document how to regenerate
+
+## New model or metric
+
+Update `src/train/`, `diagnostics.py`, `ml-evaluation.mdc`, `apps/docs/guides/ml-pipeline.md`, platform-guide Changelog.

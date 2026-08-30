@@ -1,0 +1,77 @@
+---
+description: Feature folder structure for dataset, train, predict, and Streamlit web
+alwaysApply: true
+---
+# Feature Folder Structure
+
+Keep related code in feature folders. Do not dump new files into flat roots when a feature package already exists.
+
+## Backend / ML (`src/{feature}/`)
+
+```
+src/
+├── dataset/          # Ingest properties + curves → processed CSVs
+├── train/            # Peak & curve model training, metrics, SHAP
+├── predict/          # Load joblib models; predict peak / curve
+└── shared/           # Schema constants, IO, plotting helpers used by 2+ features
+```
+
+Each feature package:
+
+```
+{feature}/
+├── __init__.py
+├── service.py        # Callable API (import from apps/web and scripts)
+└── ...               # Colocated helpers only for this feature
+```
+
+## Web (`apps/web/`)
+
+```
+apps/web/
+├── streamlit_app.py          # Thin: tabs, wiring, no heavy logic
+├── components/               # charts, forms, metric tables
+│   ├── data_charts.py
+│   ├── results_charts.py
+│   ├── curve_charts.py
+│   └── predict_form.py
+└── pages/                    # Optional Streamlit multipage (thin)
+```
+
+Mirror domain names: a new **predict** UI control lives in `components/` and calls `src.predict.service`.
+
+## Docs (`apps/docs/`)
+
+```
+apps/docs/
+├── index.md
+├── core/
+│   └── platform-guide.md     # Canonical living domain doc + Changelog
+└── guides/
+    ├── getting-started.md
+    ├── data-schema.md
+    └── ml-pipeline.md
+```
+
+## Tests (`tests/{feature}/`)
+
+Mirror `src/{feature}/`. Do not put feature tests only at `tests/` root.
+
+## Samples (`samples/`)
+
+Downloaded PEER (and later ANSYS) source data lives here — not under `apps/`. See `samples/README.md`. Processed ML tables still go to `data/processed/`.
+
+## Plans (`plans/`)
+
+Numbered plans: `plans/001-short-title.md` with a status row in `plans/README.md`.
+
+## Rules
+
+1. **New data ingest logic** → `src/dataset/`, not `scripts/` (scripts may only call the service).
+2. **New model / metric** → `src/train/`.
+3. **New inference API** → `src/predict/`.
+4. **New chart/form** → `apps/web/components/`; wire from `streamlit_app.py`.
+5. **Shared by 2+ features** → `src/shared/` (extract only after repetition).
+6. **Do not** leave duplicates at both flat and nested paths after a move.
+7. Streamlit stays thin: import feature services; put logic in `src/`.
+8. When adding a **new feature folder**, update this rule and `platform-guide.md` in the same change.

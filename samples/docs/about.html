@@ -1,0 +1,262 @@
+<HTML>
+<HEAD>
+<TITLE>PEER Structural Performance Database: About </TITLE>
+<META NAME="generator" CONTENT="Sausage Software HotDog Professional 4">
+</HEAD>
+<BODY>
+<TABLE ALIGN="LEFT" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD ALIGN="LEFT" BGCOLOR="#265AA6">
+<IMG SRC="/spd/graphics/banner.jpg" BORDER="0" WIDTH="600" HEIGHT="120">
+</TD>
+</TR>
+</TABLE>
+<BR CLEAR="ALL">
+<DIV ALIGN="RIGHT">
+<A HREF="/spd/index.html"><IMG SRC="/spd/graphics/home.jpg" BORDER="0"></A>
+<A HREF="/spd/search.html"><IMG SRC="/spd/graphics/search.jpg" BORDER="0"></A>
+<A HREF="/spd/about.html"><IMG SRC="/spd/graphics/about.jpg" BORDER="0"></A>
+<BR>
+</DIV>
+
+<h2>Force-Displacement File Format</h2>
+ 
+<p>
+The first row of each force-displacement file contains the test name, and the second row contains the number of force-displacement pairs in the history. From the third row onwards, the force-displacement pairs are provided in adjacent columns. The first column contains the top-displacement values (in mm), and the second column contains the lateral-load values (in kN). Regardless of the actual test geometry, all force-displacement data are reported in terms of an equivalent cantilever column.
+</p>
+
+<h2>Notation</h2>
+
+<p>
+The following notation (abbreviations and units) applies to data downloaded in spreadsheet format and displayed for column properties. 
+</p>
+
+<h2>Rectangular Column Properties</h2>
+<table border="1" cellpadding="2" cellspacing="2" align="center">
+<tr>
+    <td>f'c</td>
+	<td>Characteristic compressive strength of concrete (MPa)</td>
+</tr>
+<tr>
+    <td>fyl</td>
+	<td>Yield stress of longitudinal reinforcement (MPa)</td>
+</tr>
+<tr>
+    <td>fyt</td>
+	<td>Yield stress of transverse reinforcement (MPa)</td>
+</tr>
+<tr>
+    <td>fsu long</td>
+	<td>Ultimate steel strength for longitudinal reinforcement(MPa)</td>
+</tr>
+<tr>
+    <td>fsu trans</td>
+	<td>Ultimate steel strength for transverse reinforcement(MPa)</td>
+</tr>
+<tr>
+	<td>B</td>
+	<td>Column Width (mm)</td>
+</tr>
+<tr>
+	<td>H</td>	
+	<td>Column Depth (mm)</td>
+</tr>
+<tr>
+    <td>L</td>
+	<td>Length of equivalent cantilever (mm)</td>
+</tr>
+<tr>
+	<td>Bar Dia</td>	
+	<td>Diameter of transverse reinforcement (mm)</td>
+</tr>
+<tr>
+	<td>Spacing</td>
+	<td>Spacing of transverse reinforcement (mm)</td>
+</tr>
+<tr>
+	<td>Clear Cover</td>
+	<td>Distance between outer surface of column to outer edge of transverse reinforcement (mm)</td>
+</tr>
+<tr>
+	<td>Total # Bars</td>
+	<td>Number of longitudinal reinforcing bars</td>
+</tr>
+<tr>
+	<td>Diameter</td>	
+	<td>Diameter of longitudinal reinforcement bars (mm)</td>
+</tr>
+<tr>
+	<td>Gross Area</td>	
+	<td>Gross sectional area of column (mm2)</td>
+</tr>
+<tr>
+	<td>Vol. Trans</td>	
+	<td>Volumetric transverse reinforcement ratio (reported)</td>
+</tr>
+<tr>
+	<td>Reinf. Ratio</td>
+	<td>Longitudinal reinforcement ratio (calculated)</dt>
+</tr>
+<tr>
+	<td>Nv</td>	
+	<td>Number of transverse shear bars in cross section</td>  
+</tr>
+
+<tr valign="top">
+<td>Configuration</td>
+<td>C : Cantilever
+<br>DC : Double Cantilever
+<br>DE : Double Ended
+</td>
+</tr>
+
+<tr valign="top">
+<td>Type of Confinement (Code)</td>
+<td>(1) I: Interlocking ties
+<br>(2) R: Rectangular ties (around perimeter)
+<br>(3) RD:  Rectangular and Diagonal ties
+<br>(4) RI:  Rectangular and Interlocking ties
+<br>(5) RIJ: Rectangular and Interlocking ties, with J-hooks
+<br>(6) RJ: Rectangular ties with J-hooks
+<br>(7) RO: Rectangular and Octagonal ties
+<br>(8) RU:  Rectangular ties and U-bars
+<br>(9) UJ:  U-bars with J-hooks
+</td>
+</tr>
+
+<tr valign="top">
+<td>P-D Codes</td>
+<td>1 : Feff (=Mbase/L) Provided
+<br>2 : Shear Provided
+<br>3 : P  Ram rotation decreases V
+<br>4 : P Ram rotation increases V
+<br>-- : Not provided in report
+</td>
+</tr>
+
+<tr valign="top">
+<td>Failure Type</td>
+<td>1 : Flexure
+<br>2 : Shear
+<br>3 : Flexure-Shear
+</td>
+</tr>
+
+</table>
+
+<h2>Spiral Column Properties</h2>
+<table border="1" cellpadding="2" cellspacing="2" align="center">
+<tr>
+	<td>f'c</td>
+	<td>Characteristic compressive strength of concrete (MPa)</td>
+</tr>
+<tr>
+	<td>fy Long. Bars</td>
+	<td>Yield stress of longitudinal reinforcement (MPa)</td>
+</tr>
+<tr>
+	<td>fy, Spiral</td>	
+	<td>Yield stress of transverse reinforcement (MPa)</td>
+</tr>
+<tr>
+	<td>fsu Long. Bars</td>	
+	<td>Ultimate steel strength (MPa)(blank indicates that fsu was not reported)</td>
+</tr>
+<tr>
+	<td>Diameter</td> 	
+	<td>Diameter of column (mm) (Note:In case of square and octagonal sections D refers to the largest circle that can be inscribed in the section)</td>
+</tr>
+<tr>
+	<td>Length</td>	
+	<td>Length of equivalent cantilever (mm)</td>
+</tr>
+<tr>
+	<td>P</td> 	
+	<td>Axial load (kN)</td>
+</tr>
+<tr>
+	<td>Diameter, Spiral</td>
+	<td>Diameter of spiral reinforcement (mm)</td>
+</tr>
+<tr>
+	<td>Hoop Spacing, Sv</td>
+	<td>Spacing of transverse reinforcement (mm)</td>
+</tr>
+<tr>
+	<td>Cover to Ctr. of  Hoop Bar</td>
+	<td>Distance between outer surface of column and center of spiral reinforcement (mm). If there is no spiral, cover is taken as distance between outer surface and outside of longitudinal reinforcement.</td>
+</tr>
+<tr>
+	<td>Longitudinal Bars</td>	
+	<td>Number of longitudinal reinforcing bars</td>
+</tr>
+<tr>
+	<td>Diameter Long. Bars</td>
+	<td>Diameter of longitudinal reinforcement bars (mm)</td>
+</tr>
+<tr>
+	<td>rho Spiral</td>
+	<td>Volumetric transverse reinforcement ratio</td>
+</tr>
+<tr>
+	<td>rho Long</td>
+	<td>Longitudinal reinforcement ratio</td>
+</tr>
+<tr>
+	<td>Area Core</td>
+	<td>Sectional area (mm2) circumscribed by spiral/hoop reinforcement. Diameter taken as distance from center to center of spiral.</td>
+</tr>
+
+<tr valign="top">
+<td>Cross-Section</td>
+<td>O : Octagonal
+<br>C : Circular
+<br>S : Square
+</td>
+</tr>
+
+<tr valign="top">
+<td>Configuration</td>
+<td>C : Cantilever
+<br>DC : Double Cantilever
+<br>DE : Double Ended
+<br>HH : Cantilever with Hammer Head
+<br>CFB : Cantilever with Flexible Base
+</td>
+</tr>
+
+<tr valign="top">
+<td>P-D Codes</td>
+<td>1 : Feff (=Mbase/L) Provided
+<br>2 : Shear Provided
+<br>3 : P  Ram rotation decreases V
+<br>4 : P Ram rotation increases V
+<br>-- : Not provided in report
+</td>
+</tr>
+
+<tr valign="top">
+<td>Failure Type</td>
+<td>1 : Flexure
+<br>2 : Shear
+<br>3 : Flexure-Shear
+</td>
+</tr>
+
+</table>
+
+<TABLE WIDTH="100%" CELLPADDING="10" CELLSPACING="0" BORDER="0">
+<TR>
+<TD>
+<A HREF="/spd/"><IMG SRC="/spd/graphics/spd.jpg" BORDER="0" ALIGN="LEFT"></A>
+</TD>
+<TD>
+<FONT SIZE="-1">
+The Structural Performance Database is a project of the <A HREF="http://peer.berkeley.edu/">Pacific Earthquake Engineering Research Center</A>, funded by the <A HREF="http://www.nsf.gov/">National Science Foundation</A>. 
+Contact <A HREF="mailto:eberhard@u.washington.edu">Marc Eberhard</A> at the University of Washington with questions or comments. Report technical problems to the <A HREF="mailto:eerclibrary@berkeley.edu">server administrator</A>. Copyright 2003.
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

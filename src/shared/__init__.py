@@ -1,0 +1,23 @@
+"""Shared constants and utilities."""
+
+from src.shared.schema import (
+    CATEGORICAL_COLUMNS,
+    CURVE_DISPLACEMENT,
+    CURVE_LOAD,
+    DISP_AT_PEAK_TARGET,
+    FEATURE_COLUMNS,
+    ID_COLUMNS,
+    PEAK_TARGET,
+    PROPERTIES_REQUIRED,
+)
+
+__all__ = [
+    "CATEGORICAL_COLUMNS",
+    "CURVE_DISPLACEMENT",
+    "CURVE_LOAD",
+    "DISP_AT_PEAK_TARGET",
+    "FEATURE_COLUMNS",
+    "ID_COLUMNS",
+    "PEAK_TARGET",
+    "PROPERTIES_REQUIRED",
+]

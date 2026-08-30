@@ -1,0 +1,18 @@
+# Byte-compiled / OS / env ignored via .gitignore
+
+# Ruff
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src", "apps", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

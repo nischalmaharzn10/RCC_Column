@@ -1,0 +1,54 @@
+---
+description: RCC column data schema, units, and processed CSV contracts
+globs: data/**/*,src/dataset/**/*,src/shared/**/*
+alwaysApply: false
+---
+# Data Schema
+
+## Downloaded PEER source (`samples/`)
+
+Canonical download location for training source files:
+
+- `samples/properties/rectangular_properties.csv` — PEER rectangular properties
+- `samples/curves/rectangular/*.txt` — force–displacement histories
+- `samples/properties/rectangular_curve_index.csv` — specimen ↔ curve map
+- See `samples/README.md`
+
+Pipeline should read from `samples/` (or copy into `data/raw/`) when building `data/processed/`.
+
+## Raw properties (`data/raw/properties_rect.csv`)
+
+One row per specimen (normalized schema). Required columns:
+
+```
+specimen, fc_MPa, P_axial_kN, b_mm, h_mm, L_mm, Lsplice_mm, test_config,
+db_long_mm, n_long_bars, cover_mm, rho_long, fyl_MPa, steel_grade,
+db_trans_mm, s_hoop_mm, rho_trans, fyt_MPa, failure_mode, axial_load_ratio
+```
+
+Optional: `source` (`peer` | `ansys`). Default `peer` if missing.
+
+## Curve point schema (backbone)
+
+```
+specimen_id, specimen, displacement_mm, lateral_load_kN, source
+```
+
+Plus design features joined for curve mode training.
+
+## Processed outputs (`data/processed/`)
+
+| File | Mode | Notes |
+|------|------|-------|
+| `dataset_ml.csv` | Peak | Features + `peak_load_kN`, `disp_at_peak_mm`, `specimen_id`, `source` |
+| `curves_backbone.csv` | Curve | One row per backbone point |
+| `specimen_summary.csv` | Audit | Per-specimen metadata |
+
+## Rules
+
+1. **SI units only** — mm, kN, MPa. Reject or convert explicitly; never mix.
+2. **IDs** — stable `specimen_id` (slug from specimen name or PEER id).
+3. **Derived features** — e.g. `axial_load_ratio = P/(fc*b*h)` — document keep/drop in platform guide when changing.
+4. **Missing values** — median impute inside training pipeline; note sparse columns in audit.
+5. **New columns** — update `src/shared/schema.py`, this rule, `apps/docs/guides/data-schema.md`, and platform-guide Changelog together.
+6. ANSYS exports **must** use the same column names as PEER properties + curve schema.

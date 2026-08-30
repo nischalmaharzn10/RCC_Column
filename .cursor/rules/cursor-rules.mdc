@@ -1,0 +1,47 @@
+---
+description: How to add or edit Cursor rules in this project
+globs:
+alwaysApply: false
+---
+# Cursor Rules Location
+
+How to add new Cursor rules to the project.
+
+1. Always place rule files in `PROJECT_ROOT/.cursor/rules/`:
+
+```
+.cursor/rules/
+├── your-rule-name.mdc
+├── another-rule.mdc
+└── ...
+```
+
+2. Naming convention:
+   - kebab-case filenames
+   - always `.mdc` extension
+   - name describes the rule purpose
+
+3. Never place rule files in the project root, under `apps/`, or anywhere outside `.cursor/rules/`.
+
+4. Rule file structure:
+
+````markdown
+---
+description: Short description of the rule's purpose
+globs: optional/path/pattern/**/*
+alwaysApply: false
+---
+# Rule Title
+
+Main content with markdown.
+
+1. Step-by-step instructions
+2. Code examples
+3. Guidelines
+````
+
+5. When a **new feature**, schema column, UI tab, modelling mode, or folder convention is introduced:
+   - Update the matching scoped rule (or add a new `.mdc`)
+   - Update `apps/docs/core/platform-guide.md` Changelog in the **same change**
+   - Update `.cursor/rules/platform-guide.mdc` condensed facts if domain behavior changed
+   - Update `feature-folder-structure.mdc` if a new feature module folder is added

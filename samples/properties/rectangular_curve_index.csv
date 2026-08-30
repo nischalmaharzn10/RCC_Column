@@ -1,0 +1,299 @@
+specimen,curve_file,relative_url,downloaded
+"Gill et al. 1979, No. 1",gill79s1.txt,rectcol/txfiles/gill79s1.txt,yes
+"Gill et al. 1979, No. 2",gill79s2.txt,rectcol/txfiles/gill79s2.txt,yes
+"Gill et al. 1979, No. 3",gill79s3.txt,rectcol/txfiles/gill79s3.txt,yes
+"Gill et al. 1979, No. 4",gill79s4.txt,rectcol/txfiles/gill79s4.txt,yes
+"Ang et al. 1981, No. 3",ang81u3.txt,rectcol/txfiles/ang81u3.txt,yes
+"Ang et al. 1981, No. 4",ang81u4.txt,rectcol/txfiles/ang81u4.txt,yes
+"Soesianawati et al. 1986, No. 1",soes86u1.txt,rectcol/txfiles/soes86u1.txt,yes
+"Soesianawati et al. 1986, No. 2",soes86u2.txt,rectcol/txfiles/soes86u2.txt,yes
+"Soesianawati et al. 1986, No. 3",soes86u3.txt,rectcol/txfiles/soes86u3.txt,yes
+"Soesianawati et al. 1986, No. 4",soes86u4.txt,rectcol/txfiles/soes86u4.txt,yes
+"Zahn et al. 1986, No. 7",zahn86u7.txt,rectcol/txfiles/zahn86u7.txt,yes
+"Zahn et al. 1986, No. 8",zahn86u8.txt,rectcol/txfiles/zahn86u8.txt,yes
+"Watson and Park 1989, No. 5",wat89u5.txt,rectcol/txfiles/wat89u5.txt,yes
+"Watson and Park 1989, No. 6",wat89u6.txt,rectcol/txfiles/wat89u6.txt,yes
+"Watson and Park 1989, No. 7",wat89u7.txt,rectcol/txfiles/wat89u7.txt,yes
+"Watson and Park 1989, No. 8",wat89u8.txt,rectcol/txfiles/wat89u8.txt,yes
+"Watson and Park 1989, No. 9",wat89u9.txt,rectcol/txfiles/wat89u9.txt,yes
+"Tanaka and Park 1990, No. 1",tana90u1.txt,rectcol/txfiles/tana90u1.txt,yes
+"Tanaka and Park 1990, No. 2",tana90u2.txt,rectcol/txfiles/tana90u2.txt,yes
+"Tanaka and Park 1990, No. 3",tana90u3.txt,rectcol/txfiles/tana90u3.txt,yes
+"Tanaka and Park 1990, No. 4",tana90u4.txt,rectcol/txfiles/tana90u4.txt,yes
+"Tanaka and Park 1990, No. 5",tana90u5.txt,rectcol/txfiles/tana90u5.txt,yes
+"Tanaka and Park 1990, No. 6",tana90u6.txt,rectcol/txfiles/tana90u6.txt,yes
+"Tanaka and Park 1990, No. 7",tana90u7.txt,rectcol/txfiles/tana90u7.txt,yes
+"Tanaka and Park 1990, No. 8",tana90u8.txt,rectcol/txfiles/tana90u8.txt,yes
+"Park and Paulay 1990, No. 9",tana90u9.txt,rectcol/txfiles/tana90u9.txt,yes
+"Arakawa et al. 1982, No. 102",ara82102.txt,rectcol/txfiles/ara82102.txt,yes
+"Nagasaka 1982, HPRC10-63",nag1063.txt,rectcol/txfiles/nag1063.txt,yes
+"Nagasaka 1982, HPRC19-32",nag1932.txt,rectcol/txfiles/nag1932.txt,yes
+"Ohno and Nishioka 1984, L1",ohno84l1.txt,rectcol/txfiles/ohno84l1.txt,yes
+"Ohno and Nishioka 1984, L2",ohno84l2.txt,rectcol/txfiles/ohno84l2.txt,yes
+"Ohno and Nishioka 1984, L3",ohno84l3.txt,rectcol/txfiles/ohno84l3.txt,yes
+"Ohue et al. 1985, 2D16RS",oh2d16rs.txt,rectcol/txfiles/oh2d16rs.txt,yes
+"Ohue et al. 1985, 4D13RS",oh4d13rs.txt,rectcol/txfiles/oh4d13rs.txt,yes
+"Zhou et al. 1985, No. 806",zho806.txt,rectcol/txfiles/zho806.txt,yes
+"Zhou et al. 1985, No. 1007",zho1007.txt,rectcol/txfiles/zho1007.txt,yes
+"Zhou et al. 1985, No. 1309",zho1309.txt,rectcol/txfiles/zho1309.txt,yes
+"Imai and Yamamoto 1986, No. 1",imai86.txt,rectcol/txfiles/imai86.txt,yes
+"Zhou et al. 1987, No. 104-08",zho10408.txt,rectcol/txfiles/zho10408.txt,yes
+"Zhou et al. 1987, No. 114-08",zho11408.txt,rectcol/txfiles/zho11408.txt,yes
+"Zhou et al. 1987, No. 124-08",zho12408.txt,rectcol/txfiles/zho12408.txt,yes
+"Zhou et al. 1987, No. 204-08",zho20408.txt,rectcol/txfiles/zho20408.txt,yes
+"Zhou et al. 1987, No. 214-08",zho21408.txt,rectcol/txfiles/zho21408.txt,yes
+"Zhou et al. 1987, No. 223-09",zho22309.txt,rectcol/txfiles/zho22309.txt,yes
+"Zhou et al. 1987, No. 302-07",zho30207.txt,rectcol/txfiles/zho30207.txt,yes
+"Zhou et al. 1987, No. 312-07",zho31207.txt,rectcol/txfiles/zho31207.txt,yes
+"Zhou et al. 1987, No. 322-07",zho32207.txt,rectcol/txfiles/zho32207.txt,yes
+"Kanda et al. 1988, 85STC-1",kanstc1.txt,rectcol/txfiles/kanstc1.txt,yes
+"Kanda et al. 1988, 85STC-2",kanstc2.txt,rectcol/txfiles/kanstc2.txt,yes
+"Kanda et al. 1988, 85STC-3",kanstc3.txt,rectcol/txfiles/kanstc3.txt,yes
+"Kanda et al. 1988, 85PDC-1",kanpdc1.txt,rectcol/txfiles/kanpdc1.txt,yes
+"Kanda et al. 1988, 85PDC-2",kanpdc2.txt,rectcol/txfiles/kanpdc2.txt,yes
+"Kanda et al. 1988, 85PDC-3",kanpdc3.txt,rectcol/txfiles/kanpdc3.txt,yes
+"Arakawa et al. 1989, OA2",ara89oa2.txt,rectcol/txfiles/ara89oa2.txt,yes
+"Arakawa et al. 1989, OA5",ara89oa5.txt,rectcol/txfiles/ara89oa5.txt,yes
+"Muguruma et al. 1989, AL-1",mug89al1.txt,rectcol/txfiles/mug89al1.txt,yes
+"Muguruma et al. 1989, AH-1",mug89ah1.txt,rectcol/txfiles/mug89ah1.txt,yes
+"Muguruma et al. 1989, AL-2",mug89al2.txt,rectcol/txfiles/mug89al2.txt,yes
+"Muguruma et al. 1989, AH-2",mug89ah2.txt,rectcol/txfiles/mug89ah2.txt,yes
+"Muguruma et al. 1989, BL-1",mug89bl1.txt,rectcol/txfiles/mug89bl1.txt,yes
+"Muguruma et al. 1989, BH-1",mug89bh1.txt,rectcol/txfiles/mug89bh1.txt,yes
+"Muguruma et al. 1989, BL-2",mug89bl2.txt,rectcol/txfiles/mug89bl2.txt,yes
+"Muguruma et al. 1989, BH-2",mug89bh2.txt,rectcol/txfiles/mug89bh2.txt,yes
+"Ono et al. 1989, CA025C",ono025c.txt,rectcol/txfiles/ono025c.txt,yes
+"Ono et al. 1989, CA060C",ono060c.txt,rectcol/txfiles/ono060c.txt,yes
+"Sakai et al. 1990, B1",sak90b1.txt,rectcol/txfiles/sak90b1.txt,yes
+"Sakai et al. 1990, B2",sak90b2.txt,rectcol/txfiles/sak90b2.txt,yes
+"Sakai et al. 1990, B3",sak90b3.txt,rectcol/txfiles/sak90b3.txt,yes
+"Sakai et al. 1990, B4",sak90b4.txt,rectcol/txfiles/sak90b4.txt,yes
+"Sakai et al. 1990, B5",sak90b5.txt,rectcol/txfiles/sak90b5.txt,yes
+"Sakai et al. 1990, B6",sak90b6.txt,rectcol/txfiles/sak90b6.txt,yes
+"Sakai et al. 1990, B7",sak90b7.txt,rectcol/txfiles/sak90b7.txt,yes
+"Amitsu et al. 1991, CB060C",amcb060c.txt,rectcol/txfiles/amcb060c.txt,yes
+"Wight and Sozen 1973, No.   40.033a(East)",ws033ae.txt,rectcol/txfiles/ws033ae.txt,yes
+"Wight and Sozen 1973, No.   40.033a(West)",ws033aw.txt,rectcol/txfiles/ws033aw.txt,yes
+"Wight and Sozen 1973, No.   40.048(East)",ws048e.txt,rectcol/txfiles/ws048e.txt,yes
+"Wight and Sozen 1973, No.   40.048(West)",ws048w.txt,rectcol/txfiles/ws048w.txt,yes
+"Wight and Sozen 1973, No.   40.033(East)",ws033e.txt,rectcol/txfiles/ws033e.txt,yes
+"Wight and Sozen 1973, No.   40.033(West)",ws033w.txt,rectcol/txfiles/ws033w.txt,yes
+"Wight and Sozen 1973, No.   25.033(East)",ws25033e.txt,rectcol/txfiles/ws25033e.txt,yes
+"Wight and Sozen 1973, No.   25.033(West)",ws25033w.txt,rectcol/txfiles/ws25033w.txt,yes
+"Wight and Sozen 1973, No.   40.067(East)",ws067e.txt,rectcol/txfiles/ws067e.txt,yes
+"Wight and Sozen 1973, No.   40.067(West)",ws067w.txt,rectcol/txfiles/ws067w.txt,yes
+"Wight and Sozen 1973, No.   40.147(East)",ws147e.txt,rectcol/txfiles/ws147e.txt,yes
+"Wight and Sozen 1973, No.   40.147(West)",ws147w.txt,rectcol/txfiles/ws147w.txt,yes
+"Wight and Sozen 1973, No.   40.092(East)",ws092e.txt,rectcol/txfiles/ws092e.txt,yes
+"Wight and Sozen 1973, No.   40.092(West)",ws092w.txt,rectcol/txfiles/ws092w.txt,yes
+"Atalay and Penzien 1975, No. 1S1",at75n1s1.txt,rectcol/txfiles/at75n1s1.txt,yes
+"Atalay and Penzien 1975, No. 2S1",at75n2s1.txt,rectcol/txfiles/at75n2s1.txt,yes
+"Atalay and Penzien 1975, No. 3S1",at75n3s1.txt,rectcol/txfiles/at75n3s1.txt,yes
+"Atalay and Penzien 1975, No. 4S1",at75n4s1.txt,rectcol/txfiles/at75n4s1.txt,yes
+"Atalay and Penzien 1975, No. 5S1",at75n5s1.txt,rectcol/txfiles/at75n5s1.txt,yes
+"Atalay and Penzien 1975, No. 6S1",at75n6s1.txt,rectcol/txfiles/at75n6s1.txt,yes
+"Atalay and Penzien 1975, No. 9",at75n9.txt,rectcol/txfiles/at75n9.txt,yes
+"Atalay and Penzien 1975, No. 10",at75n10.txt,rectcol/txfiles/at75n10.txt,yes
+"Atalay and Penzien 1975, No. 11",at75n11.txt,rectcol/txfiles/at75n11.txt,yes
+"Atalay and Penzien 1975, No. 12",at75n12.txt,rectcol/txfiles/at75n12.txt,yes
+"Umehara and Jirsa 1982, CUS",umecus.txt,rectcol/txfiles/umecus.txt,yes
+"Umehara and Jirsa 1982, CUW",umecuw.txt,rectcol/txfiles/umecuw.txt,yes
+"Umehara and Jirsa 1982, 2CUS",ume2cus.txt,rectcol/txfiles/ume2cus.txt,yes
+"Bett et al. 1985 , No. 1-1",bettno11.txt,rectcol/txfiles/bettno11.txt,yes
+"Azizinamini et al. 1988, NC-2",azi88nc2.txt,rectcol/txfiles/azi88nc2.txt,yes
+"Azizinamini et al. 1988, NC-4",azi88nc4.txt,rectcol/txfiles/azi88nc4.txt,yes
+"Saatcioglu and Ozcebe 1989, U1",saatu1.txt,rectcol/txfiles/saatu1.txt,yes
+"Saatcioglu and Ozcebe 1989, U3",saatu3.txt,rectcol/txfiles/saatu3.txt,yes
+"Saatcioglu and Ozcebe 1989, U4",saatu4.txt,rectcol/txfiles/saatu4.txt,yes
+"Saatcioglu and Ozcebe 1989, U6",saatu6.txt,rectcol/txfiles/saatu6.txt,yes
+"Saatcioglu and Ozcebe 1989, U7",saatu7.txt,rectcol/txfiles/saatu7.txt,yes
+"Galeota et al. 1996, AA1",gal96aa1.txt,rectcol/txfiles/gal96aa1.txt,yes
+"Galeota et al. 1996, AA2",gal96aa2.txt,rectcol/txfiles/gal96aa2.txt,yes
+"Galeota et al. 1996, AA3",gal96aa3.txt,rectcol/txfiles/gal96aa3.txt,yes
+"Galeota et al. 1996, AA4",gal96aa4.txt,rectcol/txfiles/gal96aa4.txt,yes
+"Galeota et al. 1996, BA1",gal96ba1.txt,rectcol/txfiles/gal96ba1.txt,yes
+"Galeota et al. 1996, BA2",gal96ba2.txt,rectcol/txfiles/gal96ba2.txt,yes
+"Galeota et al. 1996, BA3",gal96ba3.txt,rectcol/txfiles/gal96ba3.txt,yes
+"Galeota et al. 1996, BA4",gal96ba4.txt,rectcol/txfiles/gal96ba4.txt,yes
+"Galeota et al. 1996, CA1",gal96ca1.txt,rectcol/txfiles/gal96ca1.txt,yes
+"Galeota et al. 1996, CA2",gal96ca2.txt,rectcol/txfiles/gal96ca2.txt,yes
+"Galeota et al. 1996, CA3",gal96ca3.txt,rectcol/txfiles/gal96ca3.txt,yes
+"Galeota et al. 1996, CA4",gal96ca4.txt,rectcol/txfiles/gal96ca4.txt,yes
+"Galeota et al. 1996, AB1",gal96ab1.txt,rectcol/txfiles/gal96ab1.txt,yes
+"Galeota et al. 1996, AB2",gal96ab2.txt,rectcol/txfiles/gal96ab2.txt,yes
+"Galeota et al. 1996, AB3",gal96ab3.txt,rectcol/txfiles/gal96ab3.txt,yes
+"Galeota et al. 1996, AB4",gal96ab4.txt,rectcol/txfiles/gal96ab4.txt,yes
+"Galeota et al. 1996, BB",gal96bb1.txt,rectcol/txfiles/gal96bb1.txt,yes
+"Galeota et al. 1996, BB1",gal96bb2.txt,rectcol/txfiles/gal96bb2.txt,yes
+"Galeota et al. 1996, BB4",gal96bb4.txt,rectcol/txfiles/gal96bb4.txt,yes
+"Galeota et al. 1996, BB4B",gal96bb4b.txt,rectcol/txfiles/gal96bb4b.txt,yes
+"Galeota et al. 1996, CB1",gal96cb1.txt,rectcol/txfiles/gal96cb1.txt,yes
+"Galeota et al. 1996, CB2",gal96cb2.txt,rectcol/txfiles/gal96cb2.txt,yes
+"Galeota et al. 1996, CB3",gal96cb3.txt,rectcol/txfiles/gal96cb3.txt,yes
+"Galeota et al. 1996, CB4",gal96cb4.txt,rectcol/txfiles/gal96cb4.txt,yes
+"Wehbe et al. 1998, A1",wehb98a1.txt,rectcol/txfiles/wehb98a1.txt,yes
+"Wehbe et al. 1998, A2",wehb98a2.txt,rectcol/txfiles/wehb98a2.txt,yes
+"Wehbe et al. 1998, B1",wehb98b1.txt,rectcol/txfiles/wehb98b1.txt,yes
+"Wehbe et al. 1998, B2",wehb98b2.txt,rectcol/txfiles/wehb98b2.txt,yes
+"Lynn et al. 1998, 3CLH18",ly3clh18.txt,rectcol/txfiles/ly3clh18.txt,yes
+"Lynn et al. 1998, 2CLH18",ly2clh18.txt,rectcol/txfiles/ly2clh18.txt,yes
+"Lynn et al. 1998, 2CMH18",ly2cmh18.txt,rectcol/txfiles/ly2cmh18.txt,yes
+"Lynn et al. 1998, 3CMH18",ly3cmh18.txt,rectcol/txfiles/ly3cmh18.txt,yes
+"Lynn et al. 1998, 3CMD12",ly3cmd12.txt,rectcol/txfiles/ly3cmd12.txt,yes
+"Lynn et al. 1996, 3SLH18",ly3slh18.txt,rectcol/txfiles/ly3slh18.txt,yes
+"Lynn et al. 1996, 2SLH18",ly2slh18.txt,rectcol/txfiles/ly2slh18.txt,yes
+"Lynn et al. 1996, 3SMD12",ly3smd12.txt,rectcol/txfiles/ly3smd12.txt,yes
+"Xiao and Martirossyan 1998,   HC4-8L19-T10-0.1P",x8191010.txt,rectcol/txfiles/x8191010.txt,yes
+"Xiao and Martirossyan 1998,   HC4-8L19-T10-0.2P",x8191020.txt,rectcol/txfiles/x8191020.txt,yes
+"Xiao and Martirossyan 1998,   HC4-8L16-T10-0.1P",x8161010.txt,rectcol/txfiles/x8161010.txt,yes
+"Xiao and Martirossyan 1998,   HC4-8L16-T10-0.2P",x8161020.txt,rectcol/txfiles/x8161020.txt,yes
+"Xiao and Martirossyan 1998,   HC4-8L16-T6-0.1P",x816610.txt,rectcol/txfiles/x816610.txt,yes
+"Xiao and Martirossyan 1998,   HC4-8L16-T6-0.2P",x816620.txt,rectcol/txfiles/x816620.txt,yes
+"Sugano 1996, UC10H",suguc10h.txt,rectcol/txfiles/suguc10h.txt,yes
+"Sugano 1996, UC15H",suguc15h.txt,rectcol/txfiles/suguc15h.txt,yes
+"Sugano 1996, UC20H",suguc20h.txt,rectcol/txfiles/suguc20h.txt,yes
+"Sugano 1996, UC15L",suguc15l.txt,rectcol/txfiles/suguc15l.txt,yes
+"Sugano 1996, UC20L",suguc20l.txt,rectcol/txfiles/suguc20l.txt,yes
+"Nosho et al. 1996, No. 1",nosh96n1.txt,rectcol/txfiles/nosh96n1.txt,yes
+"Bayrak and Sheikh 1996, ES-1HT",shkes1ht.txt,rectcol/txfiles/shkes1ht.txt,yes
+"Bayrak and Sheikh 1996, AS-2HT",shkas2ht.txt,rectcol/txfiles/shkas2ht.txt,yes
+"Bayrak and Sheikh 1996, AS-3HT",shkas3ht.txt,rectcol/txfiles/shkas3ht.txt,yes
+"Bayrak and Sheikh 1996, AS-4HT",shkas4ht.txt,rectcol/txfiles/shkas4ht.txt,yes
+"Bayrak and Sheikh 1996, AS-5HT",shkas5ht.txt,rectcol/txfiles/shkas5ht.txt,yes
+"Bayrak and Sheikh 1996, AS-6HT",shkas6ht.txt,rectcol/txfiles/shkas6ht.txt,yes
+"Bayrak and Sheikh 1996, AS-7HT",shkas7ht.txt,rectcol/txfiles/shkas7ht.txt,yes
+"Bayrak and Sheikh 1996, ES-8HT",shkes8ht.txt,rectcol/txfiles/shkes8ht.txt,yes
+"Saatcioglu and Grira 1999, BG-1",saatbg1.txt,rectcol/txfiles/saatbg1.txt,yes
+"Saatcioglu and Grira 1999, BG-2",saatbg2.txt,rectcol/txfiles/saatbg2.txt,yes
+"Saatcioglu and Grira 1999, BG-3",saatbg3.txt,rectcol/txfiles/saatbg3.txt,yes
+"Saatcioglu and Grira 1999, BG-4",saatbg4.txt,rectcol/txfiles/saatbg4.txt,yes
+"Saatcioglu and Grira 1999, BG-5",saatbg5.txt,rectcol/txfiles/saatbg5.txt,yes
+"Saatcioglu and Grira 1999, BG-6",saatbg6.txt,rectcol/txfiles/saatbg6.txt,yes
+"Saatcioglu and Grira 1999, BG-7",saatbg7.txt,rectcol/txfiles/saatbg7.txt,yes
+"Saatcioglu and Grira 1999, BG-8",saatbg8.txt,rectcol/txfiles/saatbg8.txt,yes
+"Saatcioglu and Grira 1999, BG-9",saatbg9.txt,rectcol/txfiles/saatbg9.txt,yes
+"Saatcioglu and Grira 1999, BG-10",saatbg10.txt,rectcol/txfiles/saatbg10.txt,yes
+"Matamoros et al. 1999,C10-05N",mat1005n.txt,rectcol/txfiles/mat1005n.txt,yes
+"Matamoros et al. 1999,C10-05S",mat1005s.txt,rectcol/txfiles/mat1005s.txt,yes
+"Matamoros et al. 1999,C10-10N",mat1010n.txt,rectcol/txfiles/mat1010n.txt,yes
+"Matamoros et al. 1999,C10-10S",mat1010s.txt,rectcol/txfiles/mat1010s.txt,yes
+"Matamoros et al. 1999,C10-20N",mat1020n.txt,rectcol/txfiles/mat1020n.txt,yes
+"Matamoros et al. 1999,C10-20S",mat1020s.txt,rectcol/txfiles/mat1020s.txt,yes
+"Matamoros et al. 1999,C5-00N",mat500n.txt,rectcol/txfiles/mat500n.txt,yes
+"Matamoros et al. 1999,C5-00S",mat500s.txt,rectcol/txfiles/mat500s.txt,yes
+"Matamoros et al. 1999,C5-20N",mat520n.txt,rectcol/txfiles/mat520n.txt,yes
+"Matamoros et al. 1999,C5-20S",mat520s.txt,rectcol/txfiles/mat520s.txt,yes
+"Matamoros et al. 1999,C5-40N",mat540n.txt,rectcol/txfiles/mat540n.txt,yes
+"Matamoros et al. 1999,C5-40S",mat540s.txt,rectcol/txfiles/mat540s.txt,yes
+"Mo and Wang 2000,C1-1",moc11.txt,rectcol/txfiles/moc11.txt,yes
+"Mo and Wang 2000,C1-2",moc12.txt,rectcol/txfiles/moc12.txt,yes
+"Mo and Wang 2000,C1-3",moc13.txt,rectcol/txfiles/moc13.txt,yes
+"Mo and Wang 2000,C2-1",moc21.txt,rectcol/txfiles/moc21.txt,yes
+"Mo and Wang 2000,C2-2",moc22.txt,rectcol/txfiles/moc22.txt,yes
+"Mo and Wang 2000,C2-3",moc23.txt,rectcol/txfiles/moc23.txt,yes
+"Mo and Wang 2000,C3-1",moc31.txt,rectcol/txfiles/moc31.txt,yes
+"Mo and Wang 2000,C3-2",moc32.txt,rectcol/txfiles/moc32.txt,yes
+"Mo and Wang 2000,C3-3",moc33.txt,rectcol/txfiles/moc33.txt,yes
+"Aboutaha and Machado 1999, ORC1",abouorc1.txt,rectcol/txfiles/abouorc1.txt,yes
+"Aboutaha and Machado 1999, ORC2",abouorc2.txt,rectcol/txfiles/abouorc2.txt,yes
+"Aboutaha and Machado 1999, ORC3",abouorc3.txt,rectcol/txfiles/abouorc3.txt,yes
+"Aboutaha et al. 1999, SC3",abousc3.txt,rectcol/txfiles/abousc3.txt,yes
+"Aboutaha et al. 1999, SC9",abousc9.txt,rectcol/txfiles/abousc9.txt,yes
+"Thomsen and Wallace 1994, A1",thom94a1.txt,rectcol/txfiles/thom94a1.txt,yes
+"Thomsen and Wallace 1994, A3",thom94a3.txt,rectcol/txfiles/thom94a3.txt,yes
+"Thomsen and Wallace 1994, B1",thom94b1.txt,rectcol/txfiles/thom94b1.txt,yes
+"Thomsen and Wallace 1994, B2",thom94b2.txt,rectcol/txfiles/thom94b2.txt,yes
+"Thomsen and Wallace 1994, B3",thom94b3.txt,rectcol/txfiles/thom94b3.txt,yes
+"Thomsen and Wallace 1994, C1",thom94c1.txt,rectcol/txfiles/thom94c1.txt,yes
+"Thomsen and Wallace 1994, C2",thom94c2.txt,rectcol/txfiles/thom94c2.txt,yes
+"Thomsen and Wallace 1994, C3",thom94c3.txt,rectcol/txfiles/thom94c3.txt,yes
+"Thomsen and Wallace 1994, D1",thom94d1.txt,rectcol/txfiles/thom94d1.txt,yes
+"Thomsen and Wallace 1994, D2",thom94d2.txt,rectcol/txfiles/thom94d2.txt,yes
+"Thomsen and Wallace 1994, D3",thom94d3.txt,rectcol/txfiles/thom94d3.txt,yes
+Sezen and Moehle No. 1,sezen1.txt,rectcol/txfiles/sezen1.txt,yes
+Sezen and Moehle No. 2,sezen2.txt,rectcol/txfiles/sezen2.txt,yes
+Sezen and Moehle No. 4,sezen4.txt,rectcol/txfiles/sezen4.txt,yes
+"Paultre & Legeron, 2000, No.   1006015",1006015.txt,rectcol/txfiles/1006015.txt,yes
+"Paultre & Legeron, 2000, No.   1006025",1006025.txt,rectcol/txfiles/1006025.txt,yes
+"Paultre & Legeron, 2000, No.   1006040",1006040.txt,rectcol/txfiles/1006040.txt,yes
+"Paultre & Legeron, 2000, No.   10013015",10013015.txt,rectcol/txfiles/10013015.txt,yes
+"Paultre & Legeron, 2000, No.   10013025",10013025.txt,rectcol/txfiles/10013025.txt,yes
+"Paultre & Legeron, 2000, No.   10013040",10013040.txt,rectcol/txfiles/10013040.txt,yes
+"Paultre et al., 2001, No. 806040",806040.txt,rectcol/txfiles/806040.txt,yes
+"Paultre et al., 2001, No.   1206040",1206040.txt,rectcol/txfiles/1206040.txt,yes
+"Paultre et al., 2001, No.   1005540",1005540.txt,rectcol/txfiles/1005540.txt,yes
+"Paultre et al., 2001, No.   1008040",1008040.txt,rectcol/txfiles/1008040.txt,yes
+"Paultre et al., 2001, No.   1005552",1005552.txt,rectcol/txfiles/1005552.txt,yes
+"Paultre et al., 2001, No.   1006052",1006052.txt,rectcol/txfiles/1006052.txt,yes
+"Pujol 2002, No. 10-2-3N",Pujol_10-2-3N.txt,rectcol/txfiles/Pujol_10-2-3N.txt,yes
+"Pujol 2002, No. 10-2-3S",Pujol_10-2-3S.txt,rectcol/txfiles/Pujol_10-2-3S.txt,yes
+"Pujol 2002, No. 10-3-1.5N",Pujol_10-3-1.5N.txt,rectcol/txfiles/Pujol_10-3-1.5N.txt,yes
+"Pujol 2002, No. 10-3-1.5S",Pujol_10-3-1.5S.txt,rectcol/txfiles/Pujol_10-3-1.5S.txt,yes
+"Pujol 2002, No. 10-3-3N",Pujol_10-3-3N.txt,rectcol/txfiles/Pujol_10-3-3N.txt,yes
+"Pujol 2002, No. 10-3-3S",Pujol_10-3-3S.txt,rectcol/txfiles/Pujol_10-3-3S.txt,yes
+"Pujol 2002, No. 10-3-2.25N",Pujol_10-3-2N.txt,rectcol/txfiles/Pujol_10-3-2N.txt,yes
+"Pujol 2002, No. 10-3-2.25S",Pujol_10-3-2S.txt,rectcol/txfiles/Pujol_10-3-2S.txt,yes
+"Pujol 2002, No. 20-3-3N",Pujol_20-3-3N.txt,rectcol/txfiles/Pujol_20-3-3N.txt,yes
+"Pujol 2002, No. 20-3-3S",Pujol_20-3-3S.txt,rectcol/txfiles/Pujol_20-3-3S.txt,yes
+"Pujol 2002, No. 10-2-2.25N",Pujol_10-2-2N.txt,rectcol/txfiles/Pujol_10-2-2N.txt,yes
+"Pujol 2002, No. 10-2-2.25S",Pujol_10-2-2S.txt,rectcol/txfiles/Pujol_10-2-2S.txt,yes
+"Pujol 2002, No. 10-1-2.25N",Pujol_10-1-2N.txt,rectcol/txfiles/Pujol_10-1-2N.txt,yes
+"Pujol 2002, No. 10-1-2.25S",Pujol_10-1-2S.txt,rectcol/txfiles/Pujol_10-1-2S.txt,yes
+"Bechtoula, Kono, Arai and   Watanabe, 2002, D1N30",Bechtoula_Kono_D1N30.txt,rectcol/txfiles/Bechtoula_Kono_D1N30.txt,yes
+"Bechtoula, Kono, Arai and   Watanabe, 2002, D1N60",Bechtoula_Kono_D1N60.txt,rectcol/txfiles/Bechtoula_Kono_D1N60.txt,yes
+"Bechtoula, Kono, Arai and   Watanabe, 2002, L1D60",Bechtoula_Kono_L1D60.txt,rectcol/txfiles/Bechtoula_Kono_L1D60.txt,yes
+"Bechtoula, Kono, Arai and   Watanabe, 2002, L1N60",Bechtoula_Kono_L1N60.txt,rectcol/txfiles/Bechtoula_Kono_L1N60.txt,yes
+"Bechtoula, Kono, Arai and   Watanabe, 2002, L1N6B",Bechtoula_Kono_L1N6B.txt,rectcol/txfiles/Bechtoula_Kono_L1N6B.txt,yes
+"Takemura and Kawashima, 1997,   Test 1 (JSCE-4)",Takemura_Kawashima1.txt,rectcol/txfiles/Takemura_Kawashima1.txt,yes
+"Takemura and Kawashima, 1997,   Test 2 (JSCE-5)",Takemura_Kawashima2.txt,rectcol/txfiles/Takemura_Kawashima2.txt,yes
+"Takemura and Kawashima, 1997,   Test 3 (JSCE-6)",Takemura_Kawashima3.txt,rectcol/txfiles/Takemura_Kawashima3.txt,yes
+"Takemura and Kawashima, 1997,   Test 4 (JSCE-7)",Takemura_Kawashima4.txt,rectcol/txfiles/Takemura_Kawashima4.txt,yes
+"Takemura and Kawashima, 1997,   Test 5 (JSCE-8)",Takemura_Kawashima5.txt,rectcol/txfiles/Takemura_Kawashima5.txt,yes
+"Takemura and Kawashima, 1997,   Test 6 (JSCE-9)",Takemura_Kawashima6.txt,rectcol/txfiles/Takemura_Kawashima6.txt,yes
+"Xiao & Yun 2002, No.   FHC1-0.2",XiaoFHC1.txt,rectcol/txfiles/XiaoFHC1.txt,yes
+"Xiao & Yun 2002, No.   FHC2-0.34",XiaoFHC2.txt,rectcol/txfiles/XiaoFHC2.txt,yes
+"Xiao & Yun 2002, No.   FHC3-0.22",XiaoFHC3.txt,rectcol/txfiles/XiaoFHC3.txt,yes
+"Xiao & Yun 2002, No.   FHC4-0.33",XiaoFHC4.txt,rectcol/txfiles/XiaoFHC4.txt,yes
+"Xiao & Yun 2002, No.   FHC5-0.2",XiaoFHC5.txt,rectcol/txfiles/XiaoFHC5.txt,yes
+"Xiao & Yun 2002, No.   FHC6-0.2",XiaoFHC6.txt,rectcol/txfiles/XiaoFHC6.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-9HT",BayrakSheik_RS-9HT.txt,rectcol/txfiles/BayrakSheik_RS-9HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-10HT",BayrakSheik_RS-10HT.txt,rectcol/txfiles/BayrakSheik_RS-10HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-11HT",BayrakSheik_RS-11HT.txt,rectcol/txfiles/BayrakSheik_RS-11HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-12HT",BayrakSheik_RS-12HT.txt,rectcol/txfiles/BayrakSheik_RS-12HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-13HT",BayrakSheik_RS-13HT.txt,rectcol/txfiles/BayrakSheik_RS-13HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-14HT",BayrakSheik_RS-14HT.txt,rectcol/txfiles/BayrakSheik_RS-14HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-15HT",BayrakSheik_RS-15HT.txt,rectcol/txfiles/BayrakSheik_RS-15HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-16HT",BayrakSheik_RS-16HT.txt,rectcol/txfiles/BayrakSheik_RS-16HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-17HT",BayrakSheik_RS-17HT.txt,rectcol/txfiles/BayrakSheik_RS-17HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-18HT",BayrakSheik_RS-18HT.txt,rectcol/txfiles/BayrakSheik_RS-18HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-19HT",BayrakSheik_RS-19HT.txt,rectcol/txfiles/BayrakSheik_RS-19HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   RS-20HT",BayrakSheik_RS-20HT.txt,rectcol/txfiles/BayrakSheik_RS-20HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   WRS-21HT",BayrakSheik_WRS-21HT.txt,rectcol/txfiles/BayrakSheik_WRS-21HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   WRS-22HT",BayrakSheik_WRS-22HT.txt,rectcol/txfiles/BayrakSheik_WRS-22HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   WRS-23HT",BayrakSheik_WRS-23HT.txt,rectcol/txfiles/BayrakSheik_WRS-23HT.txt,yes
+"Bayrak & Sheikh, 2002, No.   WRS-24HT",BayrakSheik_WRS-24HT.txt,rectcol/txfiles/BayrakSheik_WRS-24HT.txt,yes
+"Xiao et al, 1994, R1A",Xiao_R1A.txt,rectcol/txfiles/Xiao_R1A.txt,no
+"Xiao et al, 1994, R3A",Xiao_R3A.txt,rectcol/txfiles/Xiao_R3A.txt,no
+"Xiao et al, 1994, R5A",Xiao_R5A.txt,rectcol/txfiles/Xiao_R5A.txt,no
+"Ramirez & Jirsa, 1980, 00-U",RamirezJirsa_00-U.txt,rectcol/txfiles/RamirezJirsa_00-U.txt,yes
+"Ramirez & Jirsa, 1980,   120C-U",RamirezJirsa_120C-U.txt,rectcol/txfiles/RamirezJirsa_120C-U.txt,yes
+"Wight and Sozen 1973, No.   00.033(East)",WightSozen_73_00.033E.txt,rectcol/txfiles/WightSozen_73_00.033E.txt,yes
+"Wight and Sozen 1973, No.   00.033(West)",WightSozen_73_00.033W.txt,rectcol/txfiles/WightSozen_73_00.033W.txt,yes
+"Wight and Sozen 1973, No.   00.048(East)",WightSozen_73_00.048E.txt,rectcol/txfiles/WightSozen_73_00.048E.txt,yes
+"Saatcioglu and Ozcebe 1989, U2",SaatOzcebe_89_U2.txt,rectcol/txfiles/SaatOzcebe_89_U2.txt,yes
+"Esaki, 1996 H-2-1/5",Esaki_96_H-2-15.txt,rectcol/txfiles/Esaki_96_H-2-15.txt,yes
+"Esaki, 1996 HT-2-1/5",Esaki_96_HT-2-15.txt,rectcol/txfiles/Esaki_96_HT-2-15.txt,yes
+"Esaki, 1996 H-2-1/3",Esaki_96_H-2-13.txt,rectcol/txfiles/Esaki_96_H-2-13.txt,yes
+"Esaki, 1996 HT-2-1/3",Esaki_96_HT-2-13.txt,rectcol/txfiles/Esaki_96_HT-2-13.txt,yes
+"Iwasaki, 1985, P-18",Iwasaki_85_P-18.txt,rectcol/txfiles/Iwasaki_85_P-18.txt,yes
+"Iwasaki, 1985, P-21",Iwasaki_85_P-21.txt,rectcol/txfiles/Iwasaki_85_P-21.txt,yes
+"Iwasaki, 1985, P-25",Iwasaki_85_P-25.txt,rectcol/txfiles/Iwasaki_85_P-25.txt,yes
+"Mattock & Wang, 1984,   C210-S0",MattockWang_C210-S0_dummy.txt,rectcol/txfiles/MattockWang_C210-S0_dummy.txt,no
+"Mattock & Wang, 1984,   C210-S1",MattockWang_C210-S1_dummy.txt,rectcol/txfiles/MattockWang_C210-S1_dummy.txt,no
+"Mattock & Wang, 1984,   C210-S2",MattockWang_C210-S2_dummy.txt,rectcol/txfiles/MattockWang_C210-S2_dummy.txt,no
+"Mattock & Wang, 1984,   C210-S4",MattockWang_C210-S4_dummy.txt,rectcol/txfiles/MattockWang_C210-S4_dummy.txt,no
+"Mattock & Wang, 1984,   C210-S6",MattockWang_C210-S6_dummy.txt,rectcol/txfiles/MattockWang_C210-S6_dummy.txt,no
+"Mattock & Wang, 1984,   C105-S3",MattockWang_C105-S3_dummy.txt,rectcol/txfiles/MattockWang_C105-S3_dummy.txt,no
+"Mattock & Wang, 1984,   C105-S6",MattockWang_C105-S6_dummy.txt,rectcol/txfiles/MattockWang_C105-S6_dummy.txt,no
+"Mattock & Wang, 1984,   C205-S0",MattockWang_C205-S0_dummy.txt,rectcol/txfiles/MattockWang_C205-S0_dummy.txt,no
+"Mattock & Wang, 1984,   C205-S3",MattockWang_C205-S3_dummy.txt,rectcol/txfiles/MattockWang_C205-S3_dummy.txt,no

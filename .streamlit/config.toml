@@ -1,0 +1,11 @@
+# Streamlit server config — local dev / Streamlit Community Cloud
+[server]
+address = "0.0.0.0"
+port = 8501
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
