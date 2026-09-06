@@ -1,6 +1,6 @@
 # Contributing to RCC Column ML
 
-Thanks for contributing. Keep the repo organized the same way from day one — feature folders, docs, and Cursor rules stay in sync.
+Thanks for contributing. This guide covers setup, branching, structure, and documentation expectations.
 
 ## Table of contents
 
@@ -9,14 +9,15 @@ Thanks for contributing. Keep the repo organized the same way from day one — f
 - [Branching and commits](#branching-and-commits)
 - [Project structure](#project-structure)
 - [Adding a feature](#adding-a-feature)
-- [Documentation and rules](#documentation-and-rules)
+- [Documentation](#documentation)
 - [Code style](#code-style)
+- [Checks before a PR](#checks-before-a-pr)
 
 ## What you need
 
 - Python 3.10+
 - Git
-- (Optional) ANSYS exports using the same CSV schema as PEER properties
+- Node.js (optional; enables `npm run` scripts)
 
 ## Setup
 
@@ -24,12 +25,13 @@ See [setup.md](setup.md) and [apps/docs/guides/getting-started.md](apps/docs/gui
 
 ```bash
 python -m venv .venv
-.venv\Scripts\activate
+.venv\Scripts\Activate.ps1   # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-npm install   # optional; enables npm run dev / train / …
+npm install
+npm run build:data
+npm run train
+npm run dev                  # http://localhost:8501
 ```
-
-**Start the UI:** `npm run dev` (or `streamlit run apps/web/streamlit_app.py`).
 
 ## Branching and commits
 
@@ -45,43 +47,49 @@ docs: changelog platform-guide for Predict tab
 
 ## Project structure
 
-| Path | Own |
-|------|-----|
-| `src/dataset/` | Data ingest & audit |
-| `src/train/` | Training & metrics |
+| Path | Owns |
+|------|------|
+| `src/dataset/` | Data ingest and audit |
+| `src/train/` | Training and metrics |
 | `src/predict/` | Inference API |
-| `src/shared/` | Shared schema/utils (only when used by 2+ features) |
-| `apps/web/` | Streamlit UI (thin) |
-| `apps/docs/` | Living documentation |
-| `tests/{feature}/` | Tests mirroring `src` |
-| `.cursor/rules/` | Cursor agent rules |
+| `src/shared/` | Shared schema/utils (when used by 2+ features) |
+| `apps/web/` | Streamlit UI (thin presentation only) |
+| `apps/docs/` | Product and pipeline documentation |
+| `tests/{feature}/` | Tests mirroring `src/{feature}/` |
+| `samples/` | PEER source properties and curves |
 
-Details: `.cursor/rules/feature-folder-structure.mdc`
+Keep business logic in `src/`. Streamlit pages and components should call `src.*.service` APIs only.
 
 ## Adding a feature
 
-1. Put logic in `src/{feature}/service.py` (create the package if new).
-2. Add thin UI in `apps/web/components/` and wire tabs in `streamlit_app.py`.
+1. Put logic in `src/{feature}/service.py` (create the package if needed).
+2. Add thin UI under `apps/web/components/` and wire it from `streamlit_app.py` when it belongs on Predict.
 3. Add tests under `tests/{feature}/`.
-4. Update **`apps/docs/core/platform-guide.md`** Changelog (required).
-5. Update matching **`.cursor/rules/*.mdc`** (schema, ML, UI, or feature-folder-structure).
-6. If env vars or start scripts change → `setup.md` + `.env.example` + `package.json` as needed.
+4. Update **`apps/docs/core/platform-guide.md`** Changelog for any user-facing behavior change.
+5. If env vars or start scripts change, update `setup.md`, `.env.example`, and `package.json` as needed.
 
-## Documentation and rules
+## Documentation
 
-- Canonical domain doc: `apps/docs/core/platform-guide.md`
-- Agent mirror: `.cursor/rules/platform-guide.mdc`
-- How to add rules: `.cursor/rules/cursor-rules.mdc`
+- Domain and behavior: `apps/docs/core/platform-guide.md`
+- Schema: `apps/docs/guides/data-schema.md`
+- Training: `apps/docs/guides/ml-pipeline.md`
+- Local setup: `setup.md`
 
-Do not invent a parallel docs tree at repo root beyond README / CONTRIBUTING / CLAUDE / setup.md / CHANGELOG.
+Keep root docs limited to README, CONTRIBUTING, setup.md, and CHANGELOG unless there is a clear reason to add another.
 
 ## Code style
 
-- Ruff format + lint (`pyproject.toml`)
-- Double quotes, line length 100
-- No training logic inside Streamlit modules
-- SI units only; specimen-grouped splits only
+- Ruff format and lint (`pyproject.toml`) — double quotes, line length 100
+- Prefer explicit types on public function signatures
+- SI units only (mm, kN, MPa)
+- Always split train/test by `specimen` / `specimen_id` (no leakage)
+- No training or fitting logic inside Streamlit modules
 
-## Need help?
+## Checks before a PR
 
-Check `CLAUDE.md` and `.cursor/rules/project-overview.mdc` for architecture orientation.
+```bash
+npm run lint
+npm run test
+```
+
+Confirm the Predict UI still runs (`npm run dev`) if you touched `apps/web/` or `src/predict/`.

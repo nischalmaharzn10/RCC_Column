@@ -1,103 +1,48 @@
 # RCC Column ML
 
-Machine-learning surrogate for **RCC column load–deformation** response, with interactive graphs in Streamlit.
+Predict the **load–deformation** response of reinforced concrete columns from design parameters — peak lateral capacity and the backbone curve — in an interactive web app.
 
-Organization follows the same governance pattern as our Kaneo/jira repos: `apps/` + feature modules under `src/` + living docs + `.cursor/rules`.
+**Live demo:** [rcc-column.streamlit.app](https://rcc-column.streamlit.app)
 
-## Stack
+## What it does
 
-| Layer | Choice |
-|-------|--------|
-| Language | Python 3.10+ |
-| Data | pandas, numpy |
-| Models | scikit-learn (RF, MLP), XGBoost |
-| Persist | joblib |
-| Explain | SHAP |
-| Charts | Plotly (UI), matplotlib (static) |
-| UI | Streamlit (`apps/web/`) |
-| Lint | Ruff |
+You enter column design inputs (geometry, concrete strength, axial load, longitudinal and transverse reinforcement). The app returns:
 
-## Repository layout
+- **Peak load** (kN)
+- **Load–displacement backbone** chart for the predicted response
 
-```
-RCC_Column/
-├── apps/
-│   ├── web/                 # Streamlit UI
-│   └── docs/                # Canonical documentation
-├── src/
-│   ├── dataset/             # Build ML tables
-│   ├── train/               # Peak & curve training
-│   ├── predict/             # Inference
-│   └── shared/              # Schema & shared helpers
-├── samples/                 # PEER downloads (properties + curves)
-├── data/raw|processed/
-├── models/                  # joblib artifacts
-├── outputs/                 # metrics & plots
-├── tests/                   # mirrors src features
-├── plans/                   # numbered design plans
-├── scripts/
-├── .cursor/rules/           # Cursor agent rules
-├── requirements.txt
-├── pyproject.toml
-├── CONTRIBUTING.md
-├── CLAUDE.md
-├── setup.md
-├── package.json
-└── CHANGELOG.md
-```
+Models are trained on PEER rectangular column experiments (and can use ANSYS runs in the same schema). Units are SI only (mm, kN, MPa).
 
-## How to start
+## Try it locally
 
 ```bash
-cd RCC_Column
 python -m venv .venv
 .venv\Scripts\activate          # Windows: .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-npm install                     # optional — enables npm run scripts
+npm install
+npm run build:data
+npm run train
+npm run dev                     # → http://localhost:8501
 ```
 
-| Command | What it does |
-|---------|----------------|
-| **`npm run dev`** | Start Streamlit UI → http://localhost:8501 |
-| `npm run build:data` | Build processed datasets |
-| `npm run train` | Train peak + curve models |
-| `npm start` | Same as `npm run dev` |
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Start the Streamlit app |
+| `npm run build:data` | Build processed training tables |
+| `npm run train` | Train peak and curve models |
 
-Without npm:
+More detail: [setup.md](setup.md).
 
-```bash
-streamlit run apps/web/streamlit_app.py
-```
-
-Full details: [setup.md](setup.md).
-
-## Documentation
+## Learn more
 
 | Doc | Purpose |
 |-----|---------|
-| [apps/docs/index.md](apps/docs/index.md) | Docs home |
-| [Platform guide](apps/docs/core/platform-guide.md) | Domain, modes, UI, **Changelog** |
 | [Getting started](apps/docs/guides/getting-started.md) | Setup walkthrough |
-| [Data schema](apps/docs/guides/data-schema.md) | CSV contracts |
-| [ML pipeline](apps/docs/guides/ml-pipeline.md) | Train / evaluate |
-| [Hosting](apps/docs/guides/hosting.md) | Private Streamlit Cloud (free), security, auto-update |
+| [Platform guide](apps/docs/core/platform-guide.md) | Domain, modes, changelog |
+| [Data schema](apps/docs/guides/data-schema.md) | Input / CSV contracts |
+| [ML pipeline](apps/docs/guides/ml-pipeline.md) | Training and evaluation |
+| [Hosting](apps/docs/guides/hosting.md) | Deploy to Streamlit Cloud |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
-| [setup.md](setup.md) | Install, env vars, **how to start** |
-
-## Cursor rules
-
-All agent rules live in [`.cursor/rules/`](.cursor/rules/). Always-applied: project overview, conventions, feature folders, enterprise architecture, platform guide. Scoped rules cover data schema, ML pipeline, Streamlit UI, and documentation.
-
-**When you add a feature:** update code + `platform-guide.md` Changelog + the matching `.mdc` rule in the same change.
-
-## Training data
-
-PEER rectangular column set is in [`samples/`](samples/README.md) (properties + force–displacement curves).
-
-## Status
-
-- **Done:** PEER `samples/`, dataset build, peak + curve training, Streamlit UI (Data / Results / Curves / Predict)
-- **Start:** `npm run build:data` → `npm run train` → `npm run dev`
 
 ## License
 

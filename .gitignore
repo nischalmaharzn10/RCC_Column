@@ -28,6 +28,10 @@ htmlcov/
 *.swp
 *.swo
 
+# Local editor / agent tooling (not part of the product)
+.cursor/rules/
+CLAUDE.md
+
 # OS
 .DS_Store
 Thumbs.db

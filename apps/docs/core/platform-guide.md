@@ -58,9 +58,9 @@ Random Forest, XGBoost, MLP — compare R² / RMSE / MAE; persist best pipeline 
 
 | Surface | Content |
 |---------|---------|
-| Predict (home) | Design inputs → peak + predicted curve |
+| Predict (home) | Design inputs (5 per row) → peak + predicted curve |
 
-No navbar / Models / Curves routes in the app shell.
+No navbar / Models / Curves routes in the app shell. Side padding is kept tight so the form and backbone chart fit on one screen.
 
 UI must call `src.*.service` — no fitting inside Streamlit.
 
@@ -76,6 +76,7 @@ Deploy Predict UI on **Streamlit Community Cloud** from a **private** GitHub rep
 
 | Date | Change |
 |------|--------|
+| 2026-09-06 | Predict UI: 5 inputs per row, tighter padding, auto preview of peak + backbone chart |
 | 2026-08-30 | Hosting guide: private Streamlit Cloud, tracked deploy joblibs, `runtime.txt` |
 | 2026-08-30 | Streamlit: Predict-only UI; Models/Curves nav kept commented in `streamlit_app.py` |
 | 2026-08-30 | Data+train upgrade: 251 specimens (name-match recover), 40-pt backbones, engineered features, two-stage curve (load_ratio)+softening; peak GBR / curve XGB both `good_fit` |

@@ -2,13 +2,64 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
 import plotly.graph_objects as go
 import streamlit as st
 
 from src.predict.service import predict_curve, predict_peak
 from src.shared.paths import models_dir
+
+# Five fields per row so the form stays short and the chart stays on-screen.
+_FIELD_ROWS: list[list[tuple[str, str, float, str | None]]] = [
+    [
+        ("fc_MPa", "fc (MPa)", 25.0, None),
+        ("P_axial_kN", "P axial (kN)", 800.0, None),
+        ("b_mm", "b (mm)", 400.0, None),
+        ("h_mm", "h (mm)", 400.0, None),
+        ("L_mm", "L (mm)", 1600.0, None),
+    ],
+    [
+        ("cover_mm", "cover (mm)", 30.0, None),
+        ("rho_long", "ρ long", 0.015, "%.4f"),
+        ("rho_trans", "ρ trans", 0.01, "%.4f"),
+        ("fyl_MPa", "fyl (MPa)", 400.0, None),
+        ("fyt_MPa", "fyt (MPa)", 300.0, None),
+    ],
+    [
+        ("db_long_mm", "db long (mm)", 16.0, None),
+        ("n_long_bars", "n long bars", 12.0, None),
+        ("db_trans_mm", "db trans (mm)", 10.0, None),
+        ("s_hoop_mm", "s hoop (mm)", 100.0, None),
+        ("steel_grade", "steel grade", 380.0, None),
+    ],
+]
+
+
+def _chart_figure(displacement, load) -> go.Figure:
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x=displacement,
+            y=load,
+            mode="lines+markers",
+            name="Predicted backbone",
+            line={"color": "#2563eb", "width": 2.5},
+            marker={"size": 5, "color": "#1d4ed8"},
+            hovertemplate="Disp %{x:.1f} mm<br>Load %{y:.1f} kN<extra></extra>",
+        )
+    )
+    fig.update_layout(
+        margin={"l": 48, "r": 16, "t": 28, "b": 44},
+        height=340,
+        xaxis_title="Displacement (mm)",
+        yaxis_title="Lateral load (kN)",
+        xaxis={"gridcolor": "#e2e8f0", "zeroline": False},
+        yaxis={"gridcolor": "#e2e8f0", "zeroline": False},
+        plot_bgcolor="#ffffff",
+        paper_bgcolor="#ffffff",
+        font={"color": "#334155", "size": 12},
+        showlegend=False,
+    )
+    return fig
 
 
 def render_predict_tab() -> None:
@@ -18,78 +69,102 @@ def render_predict_tab() -> None:
         st.warning("No saved models. Run `npm run train` first.")
         return
 
-    st.subheader("Design parameters")
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        fc = st.number_input("fc_MPa", value=25.0)
-        b = st.number_input("b_mm", value=400.0)
-        h = st.number_input("h_mm", value=400.0)
-        L = st.number_input("L_mm", value=1600.0)
-        cover = st.number_input("cover_mm", value=30.0)
-    with c2:
-        P = st.number_input("P_axial_kN", value=800.0)
-        rho_long = st.number_input("rho_long", value=0.015, format="%.4f")
-        rho_trans = st.number_input("rho_trans", value=0.01, format="%.4f")
-        fyl = st.number_input("fyl_MPa", value=400.0)
-        fyt = st.number_input("fyt_MPa", value=300.0)
-    with c3:
-        db_long = st.number_input("db_long_mm", value=16.0)
-        n_long = st.number_input("n_long_bars", value=12.0)
-        db_trans = st.number_input("db_trans_mm", value=10.0)
-        s_hoop = st.number_input("s_hoop_mm", value=100.0)
-        steel_grade = st.number_input("steel_grade", value=380.0)
+    st.markdown(
+        """
+        <div class="rcc-hero">
+          <h1>RCC Column Predict</h1>
+          <p>Enter design parameters to estimate peak capacity and the load–displacement backbone.</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-    area = b * h
-    axial_ratio = (P * 1000.0) / (fc * area) if fc * area > 0 else 0.0
-    st.caption(f"Derived axial_load_ratio ≈ {axial_ratio:.3f}")
+    st.markdown('<div class="rcc-section-label">Design parameters</div>', unsafe_allow_html=True)
+
+    values: dict[str, float] = {}
+    for row in _FIELD_ROWS:
+        cols = st.columns(5, gap="small")
+        for col, (key, label, default, fmt) in zip(cols, row, strict=True):
+            with col:
+                kwargs: dict = {"value": default, "key": f"in_{key}"}
+                if fmt is not None:
+                    kwargs["format"] = fmt
+                values[key] = float(st.number_input(label, **kwargs))
+
+    area = values["b_mm"] * values["h_mm"]
+    axial_ratio = (
+        (values["P_axial_kN"] * 1000.0) / (values["fc_MPa"] * area)
+        if values["fc_MPa"] * area > 0
+        else 0.0
+    )
+
+    action_l, action_r = st.columns([4, 1], gap="small")
+    with action_l:
+        st.caption(f"Derived axial load ratio ≈ **{axial_ratio:.3f}**")
+    with action_r:
+        run = st.button("Predict", type="primary", use_container_width=True)
 
     inputs = {
-        "fc_MPa": fc,
-        "P_axial_kN": P,
-        "b_mm": b,
-        "h_mm": h,
-        "L_mm": L,
-        "Lsplice_mm": 0.0,
-        "db_long_mm": db_long,
-        "n_long_bars": n_long,
-        "cover_mm": cover,
-        "rho_long": rho_long,
-        "fyl_MPa": fyl,
-        "steel_grade": steel_grade,
-        "db_trans_mm": db_trans,
-        "s_hoop_mm": s_hoop,
-        "rho_trans": rho_trans,
-        "fyt_MPa": fyt,
+        **values,
         "axial_load_ratio": axial_ratio,
+        "Lsplice_mm": 0.0,
         "test_config": "DE",
         "failure_mode": 1,
     }
 
-    if st.button("Predict", type="primary"):
+    if run or "last_prediction" not in st.session_state:
+        peak_val: float | None = None
+        curve_disp = None
+        curve_load = None
+        peak_error: str | None = None
+        curve_error: str | None = None
+
         if peak_path.exists():
             try:
-                peak = predict_peak(inputs)
-                st.success(f"Predicted peak load: **{peak:.1f} kN**")
+                peak_val = float(predict_peak(inputs))
             except Exception as exc:  # noqa: BLE001
-                st.error(f"Peak prediction failed: {exc}")
+                peak_error = str(exc)
 
         if curve_path.exists():
             try:
                 curve = predict_curve(inputs)
-                fig = go.Figure()
-                fig.add_trace(
-                    go.Scatter(
-                        x=curve["displacement_mm"],
-                        y=curve["predicted_load_kN"],
-                        mode="lines+markers",
-                        name="predicted backbone",
-                    )
-                )
-                fig.update_layout(
-                    title="Predicted load–displacement backbone",
-                    xaxis_title="Displacement (mm)",
-                    yaxis_title="Lateral load (kN)",
-                )
-                st.plotly_chart(fig, use_container_width=True)
+                curve_disp = curve["displacement_mm"]
+                curve_load = curve["predicted_load_kN"]
             except Exception as exc:  # noqa: BLE001
-                st.error(f"Curve prediction failed: {exc}")
+                curve_error = str(exc)
+
+        st.session_state["last_prediction"] = {
+            "peak": peak_val,
+            "disp": curve_disp,
+            "load": curve_load,
+            "peak_error": peak_error,
+            "curve_error": curve_error,
+        }
+
+    result = st.session_state["last_prediction"]
+
+    if result["peak_error"]:
+        st.error(f"Peak prediction failed: {result['peak_error']}")
+    elif result["peak"] is not None:
+        st.markdown(
+            f"""
+            <div class="rcc-peak">
+              <span class="label">Predicted peak load</span>
+              <span class="value">{result["peak"]:.1f} kN</span>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    if result["curve_error"]:
+        st.error(f"Curve prediction failed: {result['curve_error']}")
+    elif result["disp"] is not None and result["load"] is not None:
+        st.markdown(
+            '<div class="rcc-section-label">Predicted load–displacement backbone</div>',
+            unsafe_allow_html=True,
+        )
+        st.plotly_chart(
+            _chart_figure(result["disp"], result["load"]),
+            use_container_width=True,
+            config={"displayModeBar": False},
+        )

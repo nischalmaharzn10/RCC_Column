@@ -1,6 +1,6 @@
 # RCC Column ML Documentation
 
-Welcome. This tree is the **canonical documentation** for the project (same role as `apps/docs` in the Kaneo/jira repos).
+Canonical documentation for the RCC Column ML product.
 
 ## Guides
 
@@ -12,14 +12,9 @@ Welcome. This tree is the **canonical documentation** for the project (same role
 | [ML pipeline](guides/ml-pipeline.md) | Train, evaluate, artifacts |
 | [Hosting](guides/hosting.md) | Private Streamlit Cloud, security, auto-redeploy |
 
-## Root governance
+## Root docs
 
 - [README](../../README.md)
 - [CONTRIBUTING](../../CONTRIBUTING.md)
-- [setup.md](../../setup.md) — install & **how to start** (`npm run dev`)
+- [setup.md](../../setup.md) — install and how to start (`npm run dev`)
 - [CHANGELOG](../../CHANGELOG.md)
-- [CLAUDE.md](../../CLAUDE.md) — agent entry
-
-## Cursor rules
-
-Agent-enforced conventions: [`.cursor/rules/`](../../.cursor/rules/).
